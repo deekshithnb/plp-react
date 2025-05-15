@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(30% - 20px); /* Ensuring each product takes 1/3rd of the width */
+  min-width: 200px; /* Maintaining a minimum width */
+  box-sizing: border-box;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.add-to-cart {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #218838;
+}
+
+/* Responsive Behavior for Smaller Screens */
+@media (max-width: 768px) {
+  .product-card {
+      width: calc(50% - 20px); /* Two products per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+      width: 100%; /* Single product per row on small screens */
+  }
+}
